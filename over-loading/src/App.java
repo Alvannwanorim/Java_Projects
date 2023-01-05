@@ -1,7 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Inches and feet input " + convertToCentimeter(3, 4) + "cm");
-        System.out.println("Inches input " + convertToCentimeter(12) + "cm");
+        // System.out.println("Inches and feet input " + convertToCentimeter(3, 4) + "cm");
+        // System.out.println("Inches input " + convertToCentimeter(12) + "cm");
+        switchStatement();
     }
 
     public static double  convertToCentimeter(int inches) {
@@ -14,4 +15,41 @@ public class App {
         return convertToCentimeter(feetToInches);
         
     }
+
+    public static void switchStatement(){
+        int num = 7;
+
+        switch(num){
+            case 1 -> System.out.println("Value is 1 ");
+            case 2, 3 -> {
+                System.out.println("value is 2 or 2");
+                System.out.println("The exact value is" + num);
+            }
+            case 4, 5 -> {
+                System.out.println("value is 4 or 5");
+                System.out.println("The exact value is" + num);
+            }
+            default -> System.out.println("Default value is " + num);
+        }
+    }
+
+    public static String switchMonths(String name){
+        switch (name.toUpperCase()) {
+            case "JANUARY":
+            case "FEBRUARY":
+            case "MARCH":
+                return "Ist";
+
+        }
+
+        return "invalid";
+    }
+    public static String switchMonthsUpdated(String name){
+        return switch (name.toUpperCase()) {
+            case "JANUARY", "FEBRUARY", "MARCH" ->  "1st";
+            default -> "invalid";
+        };
+    }
+
+
 }
