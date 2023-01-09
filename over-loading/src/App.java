@@ -3,7 +3,8 @@ public class App {
         // System.out.println("Inches and feet input " + convertToCentimeter(3, 4) + "cm");
         // System.out.println("Inches input " + convertToCentimeter(12) + "cm");
         // switchStatement();
-        forStatement();
+        // forStatement();
+        System.out.println(sumDigits(123455));
     }
 
     public static double  convertToCentimeter(int inches) {
@@ -62,4 +63,16 @@ public class App {
         }
     }
 
+    public static int sumDigits(int number){
+        int sum = 0;
+
+        if (number < 0) return -1;
+        while (number > 9){
+            sum += number % 10;
+            number = number / 10;
+        }
+        sum += number;
+        return sum ;
+
+    }
 }
