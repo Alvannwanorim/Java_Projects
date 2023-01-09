@@ -2,7 +2,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         // System.out.println("Inches and feet input " + convertToCentimeter(3, 4) + "cm");
         // System.out.println("Inches input " + convertToCentimeter(12) + "cm");
-        switchStatement();
+        // switchStatement();
+        forStatement();
     }
 
     public static double  convertToCentimeter(int inches) {
@@ -51,5 +52,14 @@ public class App {
         };
     }
 
+    public static void forStatement(){
+        for(int i =0; i< 10; i += 1){
+            System.out.println(i);
+        }
+
+        for(double i = 1.3; i > 0.2; i-= 0.2){
+            System.out.println(i);
+        }
+    }
 
 }
